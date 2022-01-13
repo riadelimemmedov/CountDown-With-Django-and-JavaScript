@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+{% endblock scripts %}
+
+{% block title %}
+    Main Html
+{% endblock title %}
+
+{% block content %}
+    {% for event in events %}
+        <a href="{{event.get_absolute_url}}" class="link-danger d-block">{{event.name}}</a>
+    {% endfor %}
+{% endblock content %}
+

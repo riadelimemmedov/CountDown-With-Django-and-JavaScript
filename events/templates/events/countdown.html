@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static 'main.js' %}" defer></script>
+{% endblock scripts %}
+
+{% block title %}
+    Detail Event
+{% endblock title %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-5">
+            <div>{{eventdetail.name}} will take place </div>
+        </div>
+        <div class="col-7">
+            <div id="event-box">{{eventdetail.when|date:'M d, Y H:m:s'}}</div>
+        </div>
+    </div>
+
+    <div class="text-primary mt-2 font-weight-bold">Time Left</div>
+
+    <div class="text-center mt-3 h1" id="countdown-box">
+        <div class="spinner-border" role="status">
+
+        </div>
+    </div>
+
+{% endblock content %}
+
+
+
+
+
